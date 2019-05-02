@@ -16,7 +16,7 @@
             </entity>
         </entities>
     </dataStore>
-    <isPublished>true</isPublished>
+    <isPublished>false</isPublished>
     <roleMap>
         <role inherit="false" allowForAll="false" name="administrators">
             <users/>

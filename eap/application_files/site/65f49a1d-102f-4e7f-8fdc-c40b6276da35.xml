@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <siteHaul xmlns:a="http://www.appian.com/ae/types/2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <versionUuid>34df853c-07b2-4c91-842a-df56e3aa8b81</versionUuid>
-  <site a:uuid="65f49a1d-102f-4e7f-8fdc-c40b6276da35" name="newSite">
+  <versionUuid>014c5f47-4c88-4fc3-a197-cb5d88de60b3</versionUuid>
+  <site a:uuid="65f49a1d-102f-4e7f-8fdc-c40b6276da35" name="Customer">
     <description/>
-    <urlStub>newsite</urlStub>
+    <urlStub>Customer</urlStub>
     <page>
-      <staticName/>
+      <staticName>CustomerInfo</staticName>
       <description/>
-      <urlStub>5Miphg</urlStub>
-      <iconId/>
-      <visibilityExpr/>
+      <urlStub>customerinfo</urlStub>
+      <uiObject a:uuid="0002e287-5047-8000-ffe9-014d98014d98" xsi:type="a:ProcessModel"/>
+      <iconId>f001</iconId>
+      <visibilityExpr>fn!true()</visibilityExpr>
       <pageWidth>STANDARD</pageWidth>
     </page>
     <visibility>268435456</visibility>
@@ -28,9 +29,11 @@
     <showName>false</showName>
     <tempoLinkVisibility>HIDDEN</tempoLinkVisibility>
     <showRecordNews>true</showRecordNews>
+    <isSystem>false</isSystem>
   </site>
   <roleMap/>
   <history>
     <historyInfo versionUuid="34df853c-07b2-4c91-842a-df56e3aa8b81"/>
+    <historyInfo versionUuid="014c5f47-4c88-4fc3-a197-cb5d88de60b3"/>
   </history>
 </siteHaul>
