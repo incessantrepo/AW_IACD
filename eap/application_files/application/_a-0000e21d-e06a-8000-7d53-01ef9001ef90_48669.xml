@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <applicationHaul xmlns:a="http://www.appian.com/ae/types/2009">
-    <versionUuid>d8ff50cd-6863-4cd4-b430-1e9b55d5da0b</versionUuid>
+    <versionUuid>_a-0000e255-ca76-8000-23f0-01ef9001ef90_40223</versionUuid>
     <application>
         <name>Environmental Activity Permits</name>
         <uuid>_a-0000e21d-e06a-8000-7d53-01ef9001ef90_48669</uuid>
@@ -22,15 +22,11 @@
             <globalIdMap>
                 <item>
                     <type>datatype</type>
-                    <uuids>
-                        <uuid>{urn:com:appian:types:EAP}EAP_PermitDetails</uuid>
-                    </uuids>
+                    <uuids/>
                 </item>
                 <item>
                     <type>dataStore</type>
-                    <uuids>
-                        <uuid>_a-0000e21d-e06a-8000-7d53-01ef9001ef90_48693</uuid>
-                    </uuids>
+                    <uuids/>
                 </item>
                 <item>
                     <type>user</type>
@@ -52,12 +48,10 @@
                     <uuids>
                         <uuid>_a-0000e21d-e06a-8000-7d53-01ef9001ef90_48676</uuid>
                         <uuid>_a-0000e21d-e06a-8000-7d53-01ef9001ef90_48681</uuid>
-                        <uuid>_a-0000e21d-e06a-8000-7d53-01ef9001ef90_55778</uuid>
                         <uuid>_a-0000e255-ca76-8000-23f0-01ef9001ef90_31523</uuid>
                         <uuid>_a-0000e255-ca76-8000-23f0-01ef9001ef90_31545</uuid>
                         <uuid>_a-0000e255-ca76-8000-23f0-01ef9001ef90_33392</uuid>
-                        <uuid>_a-0000e236-2108-8000-23f0-01ef9001ef90_23259</uuid>
-                        <uuid>_a-0000e255-ca76-8000-23f0-01ef9001ef90_36432</uuid>
+                        <uuid>_a-0000e268-07ce-8000-23f0-01ef9001ef90_31015</uuid>
                     </uuids>
                 </item>
                 <item>
@@ -67,13 +61,13 @@
                 <item>
                     <type>processModelFolder</type>
                     <uuids>
-                        <uuid>_g-0000e285-3001-8000-ffe9-014d98014d98_4</uuid>
+                        <uuid>_g-0000e255-ca76-8000-23f0-014d98014d98_22</uuid>
                     </uuids>
                 </item>
                 <item>
                     <type>processModel</type>
                     <uuids>
-                        <uuid>0002e287-5047-8000-ffe9-014d98014d98</uuid>
+                        <uuid>0002e287-8d74-8000-23f0-014d98014d98</uuid>
                     </uuids>
                 </item>
                 <item>
@@ -111,7 +105,7 @@
                 <item>
                     <type>site</type>
                     <uuids>
-                        <uuid>65f49a1d-102f-4e7f-8fdc-c40b6276da35</uuid>
+                        <uuid>76485dcd-ab19-4e15-a3e5-a04001b12bd1</uuid>
                     </uuids>
                 </item>
                 <item>
@@ -247,7 +241,7 @@
             </role>
             <role allowForAll="false" inherit="false" name="administrators">
                 <users>
-                    <userUuid>appianadmin</userUuid>
+                    <userUuid>kiranj</userUuid>
                 </users>
                 <groups>
                     <groupUuid>_e-0000e21d-e05a-8000-7d4f-011e94011e94_61</groupUuid>
@@ -283,7 +277,7 @@
         <historyInfo versionUuid="_a-0000e255-ca76-8000-23f0-01ef9001ef90_34279"/>
         <historyInfo versionUuid="_a-0000e255-ca76-8000-23f0-01ef9001ef90_34645"/>
         <historyInfo versionUuid="_a-0000e255-ca76-8000-23f0-01ef9001ef90_34662"/>
-        <historyInfo versionUuid="_a-0000e285-2ffe-8000-ffe9-01ef9001ef90_22397"/>
-        <historyInfo versionUuid="d8ff50cd-6863-4cd4-b430-1e9b55d5da0b"/>
+        <historyInfo versionUuid="_a-0000e268-07ce-8000-23f0-01ef9001ef90_31029"/>
+        <historyInfo versionUuid="_a-0000e255-ca76-8000-23f0-01ef9001ef90_40223"/>
     </history>
-</applicationHaul><!--updated on 2019-05-02T11:28:23.692-->
+</applicationHaul><!--updated on 2019-05-02T17:43:13.813-->

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
-    <versionUuid>_a-0000e255-ca76-8000-23f0-01ef9001ef90_33109</versionUuid>
+    <versionUuid>_a-0000e268-07ce-8000-23f0-01ef9001ef90_31028</versionUuid>
     <rule>
-        <name>Interface2</name>
-        <uuid>_a-0000e255-ca76-8000-23f0-01ef9001ef90_31545</uuid>
+        <name>EAP_uiSectionCustomerInfo</name>
+        <uuid>_a-0000e268-07ce-8000-23f0-01ef9001ef90_31015</uuid>
         <description></description>
         <parentUuid>_a-0000e21d-e06a-8000-7d53-01ef9001ef90_48676</parentUuid>
         <visibility>
@@ -15,62 +15,69 @@
             <system>false</system>
             <unlogged>false</unlogged>
         </visibility>
-        <definition>#"SYSTEM_SYSRULES_formLayout_v1"(
-  label: "Form",
-  contents: {
-    #"SYSTEM_SYSRULES_sectionLayout_v1"(
-      label: "Section",
-      contents: {}
-    ),
-    #"SYSTEM_SYSRULES_boxLayout"(
-      label: "Box",
-      contents: {},
-      style: "STANDARD",
-      marginBelow: "STANDARD"
-    ),
+        <definition>load(
+  local!name,
+  local!address,
+  local!joiningDate,
+  local!purpose,
+  
+#"SYSTEM_SYSRULES_formLayout_v1"(
+  label:"Customer Details",
+  contents:{
     #"SYSTEM_SYSRULES_columnsLayout"(
       columns: {
-        #"SYSTEM_SYSRULES_columnLayout"(
-          contents: {}
-        ),
-        #"SYSTEM_SYSRULES_columnLayout"(
-          contents: {
-            #"SYSTEM_SYSRULES_sectionLayout_v1"(
-              label: "Section",
-              contents: {}
-            )
+    #"SYSTEM_SYSRULES_columnLayout"(
+      contents:{
+        #"SYSTEM_SYSRULES_textField"(
+          label:"Name",
+          value:local!name,
+          saveInto: local!name,
+          validations: {
+            if(len(local!name)&gt;5,"Name should not be more than 5 characters",{})
           }
+        ),
+        #"SYSTEM_SYSRULES_textField"(
+          label:"Address",
+          value:local!address,
+          saveInto: local!address
+        )
+      }
+    ),
+    #"SYSTEM_SYSRULES_columnLayout"(
+      contents:{
+        #"SYSTEM_SYSRULES_dateField"(
+          label:"JoiningDate",
+          value:local!joiningDate,
+          saveInto: local!joiningDate,
+          validations:if(
+            todate(local!joiningDate)&lt;today(),"Joining Date must be grater then today",{}
+          )
+        ),
+        #"SYSTEM_SYSRULES_textField"(
+          label:"Purpose",
+          value:local!purpose,
+          saveInto: local!purpose
         )
       }
     )
+    }
+    )
   },
-  buttons: #"SYSTEM_SYSRULES_ButtonLayout"(
-    primaryButtons: {
-      #"SYSTEM_SYSRULES_ButtonWidget"(
-        label: "Submit",
-        submit: true,
-        style: "PRIMARY"
+  buttons:#"SYSTEM_SYSRULES_ButtonLayout"(
+    primaryButtons:{
+      #"SYSTEM_SYSRULES_ButtonWidgetSubmit"(
+        label:"Submit"
       )
     },
-    secondaryButtons: {
-      #"SYSTEM_SYSRULES_ButtonWidget"(
-        label: "Cancel",
-        value: true,
-        saveInto: ri!cancel,
-        submit: true,
-        style: "NORMAL",
-        validate: false
+    secondaryButtons:{
+      #"SYSTEM_SYSRULES_ButtonWidgetSubmit"(
+        label:"Cancel"
       )
     }
   )
+  
+)
 )</definition>
-        <namedTypedValue>
-            <name>cancel</name>
-            <type>
-                <name>boolean</name>
-                <namespace>http://www.w3.org/2001/XMLSchema</namespace>
-            </type>
-        </namedTypedValue>
         <metadataExpr></metadataExpr>
         <preferredEditor>interface</preferredEditor>
         <offlineEnabled>false</offlineEnabled>
@@ -102,7 +109,6 @@
         </role>
     </roleMap>
     <history>
-        <historyInfo versionUuid="_a-0000e255-ca76-8000-23f0-01ef9001ef90_31555"/>
-        <historyInfo versionUuid="_a-0000e255-ca76-8000-23f0-01ef9001ef90_33109"/>
+        <historyInfo versionUuid="_a-0000e268-07ce-8000-23f0-01ef9001ef90_31028"/>
     </history>
 </contentHaul>
